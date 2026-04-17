@@ -1,0 +1,38 @@
+{
+  "name": "HARSH PROTOCOL: GLOBAL GAMING INTELLIGENCE",
+  "short_name": "HarshElite",
+  "description": "Duniya ka sabse advanced AI-powered Gaming Ecosystem for Pro Players.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#020408",
+  "theme_color": "#f3ba2f",
+  "id": "/harsh-elite-protocol",
+  "categories": ["games", "productivity", "education"],
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/800/800211.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/800/800211.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2991/2991149.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Neural AI Core Dashboard"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "prefer_related_applications": false
+}
