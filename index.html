@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <meta name="theme-color" content="#03050a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+
+    <title>HARSH PROTOCOL | Global Gaming Intelligence v9.0</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Initial Critical CSS: Loading animations and layout structural integrity */
+        :root { --neon-gold: #f3ba2f; --deep-void: #020408; }
+        body { background-color: var(--deep-void); color: #fff; font-family: 'Rajdhani', sans-serif; }
+        .font-cyber { font-family: 'Orbitron', sans-serif; }
+        
+        /* The Scanning Background: Gives an elite hacker/coder feel */
+        .grid-bg { 
+            background-image: linear-gradient(rgba(243, 186, 47, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(243, 186, 47, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="max-w-md mx-auto min-h-screen border-x border-white/5 grid-bg pb-24 overflow-x-hidden">
+
+    <header class="sticky top-0 z-[1000] bg-[#020408]/90 backdrop-blur-xl border-b border-white/10 p-5 shadow-2xl">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="relative">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center font-cyber text-2xl text-black shadow-[0_0_20px_rgba(255,255,255,0.3)]">H</div>
+                    <span class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 border-4 border-[#020408] rounded-full"></span>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-tighter italic uppercase">HARSH<span class="text-[#f3ba2f]">_ELITE</span></h1>
+                    <p class="text-[7px] font-bold text-blue-500 tracking-[0.4em] uppercase opacity-80">Intelligence Level: God Mode</p>
+                </div>
+            </div>
+            
+            <div class="bg-black/50 border border-white/5 p-3 rounded-2xl text-right">
+                <span class="text-[8px] text-gray-500 font-black block tracking-widest uppercase">Global Credits</span>
+                <span id="wallet-balance" class="text-lg font-black text-[#f3ba2f] font-cyber">₹50,000</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="px-5 py-4">
+        <div class="bg-[#f3ba2f]/10 border border-[#f3ba2f]/20 p-3 rounded-xl flex items-center gap-3">
+            <span class="bg-[#f3ba2f] text-black text-[9px] font-black px-2 py-0.5 rounded uppercase">Live</span>
+            <marquee class="text-[10px] font-bold text-[#f3ba2f] uppercase tracking-widest">
+                M416 Bullet Speed Optimized for S-Tier Players... AKM Vertical Recoil Logic Updated... Sanhok Bridge Secret Rotation Path Leaked...
+            </marquee>
+        </div>
+    </div>
+
+    <section id="ai-academy" class="p-5">
+        <div class="glass-container p-8 rounded-[40px] relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#f3ba2f]/20 animate-scan"></div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-2 h-2 bg-[#f3ba2f] rounded-full animate-pulse shadow-[0_0_10px_#f3ba2f]"></div>
+                <h2 class="text-xs font-black uppercase tracking-[0.3em] font-cyber">Neural Researcher</h2>
+            </div>
+            
+            <div id="ai-console" class="h-48 overflow-y-auto mb-6 space-y-4 custom-scrollbar">
+                <div class="bg-white/5 p-4 rounded-2xl border border-white/5 text-sm text-gray-400 leading-relaxed italic">
+                    <span class="text-[#f3ba2f] font-bold">System Root:</span> Bhai, main Harsh ka brain hoon. Main poore gaming market ka data scan kar raha hoon. <br><br>
+                    Muje pucho kisi bhi Gun ki genetics, Map ki rotations, ya Pro-Sensi ke baare mein.
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <input type="text" id="ai-input" placeholder="Ask AI: 'M416 Zero Recoil Settings'..." 
+                    class="flex-1 bg-black/40 border border-white/10 p-4 rounded-2xl text-[11px] outline-none focus:border-[#f3ba2f] transition-all duration-300">
+                <button onclick="executeNeuralScan()" class="bg-[#f3ba2f] text-black px-6 rounded-2xl font-black text-[10px] uppercase shadow-lg shadow-[#f3ba2f]/10 transition-transform active:scale-95">Scan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="flex justify-between items-end mb-6 px-2">
+            <h3 class="text-[10px] font-black text-gray-500 uppercase tracking-[0.5em]">Global Marketplace</h3>
+            <span class="text-[10px] font-bold text-[#f3ba2f] border-b border-[#f3ba2f]/30 cursor-pointer">SELL CODE +</span>
+        </div>
+
+        <div id="market-list" class="space-y-4">
+            <div class="glass-container p-6 flex justify-between items-center group cursor-pointer hover:border-[#f3ba2f]/50 transition-all">
+                <div class="flex gap-4 items-center">
+                    <div class="w-12 h-12 bg-[#f3ba2f]/5 rounded-2xl flex items-center justify-center text-xl grayscale group-hover:grayscale-0 transition-all">🧬</div>
+                    <div>
+                        <h4 class="text-sm font-black italic tracking-wide">Elite M416 Laser Sensi</h4>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-tighter">Verified by Harsh_Protocol</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm font-black text-green-500 italic">₹49.00</p>
+                    <a href="upi://pay?pa=harshtiwaritiwari220@okaxis&pn=HarshTiwari&cu=INR&am=49" class="bg-white text-black text-[9px] font-black px-4 py-2 mt-2 rounded-xl block uppercase tracking-tighter shadow-lg">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[#020408]/95 backdrop-blur-2xl border-t border-white/10 flex justify-around py-6 px-4 z-[500]">
+        <div class="flex flex-col items-center text-[#f3ba2f] transition-all cursor-pointer"><span class="text-2xl">⚡</span><span class="text-[8px] font-black uppercase mt-1">Core</span></div>
+        <div class="flex flex-col items-center text-gray-600 transition-all cursor-pointer"><span class="text-2xl">🔬</span><span class="text-[8px] font-black uppercase mt-1">Gun Lab</span></div>
+        <div class="flex flex-col items-center text-gray-600 transition-all cursor-pointer"><span class="text-2xl">💰</span><span class="text-[8px] font-black uppercase mt-1">Wallet</span></div>
+        <div class="flex flex-col items-center text-gray-600 transition-all cursor-pointer"><span class="text-2xl">👤</span><span class="text-[8px] font-black uppercase mt-1">Profile</span></div>
+    </footer>
+
+    <script src="app.js"></script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Neural Network Active: ', reg.scope))
+                    .catch(err => console.log('Protocol Error: ', err));
+            });
+        }
+    </script>
+</body>
+</html>
